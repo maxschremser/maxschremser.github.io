@@ -1,0 +1,33 @@
+# visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings
+
+paginate: 10 # pagination based on number of posts
+paginate_path: "page:num"
+exclude: ["README.md"] # files to exclude
+highlighter: rouge
+markdown: kramdown
+disqus: maxschremser
+google_analytics: GTM-MRG7BQ
+gems: [jekyll-paginate]
+
+defaults:
+  -
+    scope:
+      path: "" # empty string for all files
+    values:
+      title: Ryan J. Baxter
+
+description: "Survivalist, Developer, Naturalist"
+author:
+  name: Maximilian Schremser
+  email: maxi@schremser.com
+  github: maxschremser
+  twitter: maxschremser
+  pinterest: maxschremser
+  linkedin: maxschremser
+  bio: Survivalist, Developer, Naturalist
+
+rss_path: feed.xml
+categories_path: categories.html
+tags_path: tags.html
+
+BASE_PATH:
