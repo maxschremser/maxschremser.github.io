@@ -14,7 +14,7 @@ defaults:
     scope:
       path: "" # empty string for all files
     values:
-      title: Ryan J. Baxter
+      title: Maximilian Schremser
 
 description: "Survivalist, Developer, Naturalist"
 author:
@@ -25,6 +25,7 @@ author:
   pinterest: maxschremser
   linkedin: maxschremser
   bio: Survivalist, Developer, Naturalist
+  email_md5: b2717a8d781fb6b1624fba4015cb59d8
 
 rss_path: feed.xml
 categories_path: categories.html
