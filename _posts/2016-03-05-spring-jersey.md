@@ -12,9 +12,9 @@ Originally insprired by **[geowarin](http://geowarin.github.io/a-simple-spring-b
 I have learned some interesting new features about Spring, Spring-Boot and Jersey. I especially liked the **JerseyTest**
 which seems to be very beneficial for testing RESTful applications.
 
-# Setting up the Project
+### Setting up the Project
 Following Geowarin's Blog, I have assembled my Gradle dependencies in **build.gradle** Configuration File. 
-{% highlight gradle %}
+{% highlight Groovy %}
 buildscript {
 	ext {
 		springBootVersion = '1.3.3.RELEASE'
