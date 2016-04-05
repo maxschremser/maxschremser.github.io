@@ -7,13 +7,24 @@ fullview: true
 comments: true
 ---
 
-### Creating a Spring Boot Application in Java with spring-boot, jersey and security
-Originally insprired by **[geowarin](http://geowarin.github.io/a-simple-spring-boot-and-jersey-application.html)**'s blog
-I have learned some interesting new features about Spring, Spring-Boot and Jersey. I especially liked the **JerseyTest**
-which seems to be very beneficial for testing RESTful applications.
+Originally insprired by **[geowarin](http://geowarin.github.io/a-simple-spring-boot-and-jersey-application.html)**'s blog 
+(A Simple Spring Boot and Jersey Application) I was ambitioned to make it run with my favorite build Tools. 
 
-### Setting up the Project
-Following Geowarin's Blog, I have assembled my Gradle dependencies in **build.gradle** Configuration File. 
+#### 1. Setting up the Project
+
+1. I have started with a new Project in IntelliJ, choosing the **Spring Initializr** Project, which is a GUI for 
+[start.spring.io](https://start.spring.io). 
+
+2. After defining the project **Name** (spring-jersey), **Type** (Gradle Project), **Group** (com.schremser), 
+**Artifact** (spring-jersey) and **Package** (com.schremser.spring.jersey) 
+
+3. I have selected the Spring Boot **Version** (1.3.3) and Dependencies. 
+ 
+ a. Jersey (JAX-RS)
+ b. REST Docs
+ c. Actuator
+
+4. Next I have set up a Gradle project with the necessary dependencies.
 {% highlight Groovy %}
 buildscript {
 	ext {
@@ -73,6 +84,4 @@ task wrapper(type: Wrapper) {
 }
 {% endhighlight %}
 
-
-### References
-[geowarin](http://geowarin.github.io/a-simple-spring-boot-and-jersey-application.html)
+5. You find a working example at my github project [spring-jersey-test](https://github.com/maxschremser/spring-jersey-test).
