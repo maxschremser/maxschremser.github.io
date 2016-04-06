@@ -20,9 +20,9 @@ Originally insprired by **[geowarin](http://geowarin.github.io/a-simple-spring-b
 
 3. I have selected the Spring Boot **Version** (1.3.3) and Dependencies. 
  
- a. Jersey (JAX-RS)
- b. REST Docs
- c. Actuator
+ - Jersey (JAX-RS)
+ - REST Docs
+ - Actuator
 
 4. Next I have set up a Gradle project with the necessary dependencies.
 {% highlight Groovy %}
@@ -84,4 +84,4 @@ task wrapper(type: Wrapper) {
 }
 {% endhighlight %}
 
-5. You find a working example at my github project [spring-jersey-test](https://github.com/maxschremser/spring-jersey-test).
+5. You find a working example at my github project **[spring-jersey-test](https://github.com/maxschremser/spring-jersey-test)**.
