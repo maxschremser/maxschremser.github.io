@@ -7,7 +7,7 @@ highlighter: rouge
 markdown: kramdown
 disqus: maxschremser
 google_analytics: GTM-MRG7BQ
-gems: [jekyll-paginate]
+gems: [jekyll-paginate,jekyll-gist]
 
 defaults:
   -
