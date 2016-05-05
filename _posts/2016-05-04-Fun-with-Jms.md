@@ -147,14 +147,13 @@ cd server
 mkdir -p src/main/java/com/schremser/spring/jms/server
 {% endhighlight %}
 In this case **com.schremser.spring.jms.server** is the package name for the **JmsServer** class. The *@Configuration* **JndiConfiguration**
-is *@Autowired* to the Spring Boot Application, ensuring to receive an instance of the object with filled properties as *afterPropertiesSet()* 
-has already been called.
+is *@Autowired* to the Spring Boot Application. 
  
 - Create a new **build.gradle** file, declaring module **core** as a dependency and adding the *application* plugin with
  main class *JmsServer*.
  {% gist maxschremser/870c7e65abccb850ee73e0a287d1a6ca %}
 
-- The **JmsServer** class starts the singletons of the spring beans in order to *run()*. The server starts the messageListener
+- The **JmsServer** class starts the beans of the spring context in order to *run()*. The server starts the messageListener
 on the configured **importQueue** using the **connectionFactory**.
 The connectionFactory needs a **default.properties** file to lookup the JNDI Object. So let's create *default.properties* 
 file first:
@@ -191,6 +190,30 @@ messages into the queues without a server being started. Out JMS Server applicat
 and process them in their order. The JmsClient sends messages using Spring's JmsTemplate helper class to send messages to 
 the queue.
 
+- Change into the **client** directory and create a java package directory.
+{% highlight bash %}
+cd server
+mkdir -p src/main/java/com/schremser/spring/jms/client
+{% endhighlight %}
+In this case **com.schremser.spring.jms.client** is the package name for the **JmsClient** class. The *@Configuration* **JndiConfiguration**
+is *@Autowired* to the Spring Boot Application, just as in the server module.
+ 
+- Create a new **build.gradle** file, declaring module **core** as a dependency and adding the *application* plugin with
+ main class *JmsClient*. Change gradle's standardInput property for the run task to be able to read the messages from standard 
+ input.
+ {% gist maxschremser/2c62e8970311f5a60d1979089c71cbdb %}
+
+- The **JmsClient** class starts the beans of the spring context in order to *run()*. The client uses the **JmsTemplate**
+helper class from the spring framework. The connectionFactory needs a **default.properties** file to lookup the JNDI Object. 
+So let's create *default.properties* file first:
+{% highlight bash %}
+cd client
+mkdir -p src/main/resources
+{% endhighlight %}
+Within the *resources* directory create a **default.properties** file. 
+{% gist maxschremser/09e6f3475f5f700f9c17784fd558f024 %}
+
+- The **JmsClient** class.
 {% gist maxschremser/2c3411160dbd16f3385a53b27cf61a1e %}
 
 
