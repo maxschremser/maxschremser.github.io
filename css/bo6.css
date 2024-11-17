@@ -1,0 +1,58 @@
+html,
+body {
+    background-color: antiquewhite;
+}
+ 
+.board {
+    position: absolute;
+    margin-left: 1rem;
+    margin-top: 3rem;
+}
+.pc {
+    width: 600px;
+    border: 3px solid antiquewhite;
+    border-radius: 0.7rem;
+}
+
+.x {
+    margin-left: 2.5rem;
+}
+
+.y {
+    margin-left: 10.1rem;
+}
+
+.z {
+    margin-left: 18.7rem;
+}
+
+.note {
+    opacity: 1;
+    z-index: 1;
+    top: 11.5rem;
+    display: block;
+    position: absolute;
+    scale: 50%;
+    cursor: pointer;
+}
+
+.code {
+    z-index: 1;
+    position: absolute;
+    top: 7rem;
+    margin-left: 8rem;
+    margin-top: 3rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.number {
+    font-size: 5rem;
+    font-weight: bold;
+    color: whitesmoke;
+    padding-left: 0.7rem;
+    opacity: 0.7;
+}
+
+div.preloader {
+    display: none;
+}
