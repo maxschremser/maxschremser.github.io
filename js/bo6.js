@@ -8,9 +8,9 @@ let values = [0, 11, 10, 22, 21, 20];
 let numbers = [0, 0, 0];
 
 function calc() {
-    document.getElementById('cx').innerText = n1();
-    document.getElementById('cy').innerText = n2();
-    document.getElementById('cz').innerText = n3();
+    document.getElementById('cx').innerText = n1().toString().padStart(2, '0');
+    document.getElementById('cy').innerText = n2().toString().padStart(2, '0');
+    document.getElementById('cz').innerText = n3().toString().padStart(2, '0');
 }
 
 function n1() {
