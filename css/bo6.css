@@ -39,17 +39,20 @@ body {
 .code {
     z-index: 1;
     position: absolute;
-    top: 7rem;
+    top: 23rem;
     margin-left: 8rem;
     margin-top: 3rem;
-    font-family: 'Courier New', Courier, monospace;
+    font-family:Arial, Helvetica, sans-serif;
+    text-wrap: nowrap;
+    text-underline-offset: 1.2rem;
+    text-overline-offset: 1rem;
+    color: whitesmoke;
+    font-size: 5rem;
+    font-weight: bold;
 }
 
 .number {
-    font-size: 5rem;
-    font-weight: bold;
-    color: whitesmoke;
-    padding-left: 0.7rem;
+    text-decoration: underline overline;
     opacity: 0.7;
 }
 
